@@ -5,7 +5,7 @@ Scraping www.brandonsanderson.com for book updates.
 
 Checks for updates and adds a time stamp to show time between changes.
 
-This script  uses 4 text files make sure to create them add the locations to
+This script  uses 4 text files make sure to create them and add the locations to
 the per, per-old, new and old varibles
 """
 
