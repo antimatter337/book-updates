@@ -1,2 +1,2 @@
 # book-updates
-python scripts that grab book progression from authors websites
+python scripts that grabs book progression from authors websites
