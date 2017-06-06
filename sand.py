@@ -44,7 +44,7 @@ def get_text():
     return x
 
 
-def change_wirite_text():
+def change_write_text():
     """Make text more readable || Then write to file"""
     global out
     xx = x.replace("\n", ' ').replace(' %', '%').lstrip()
