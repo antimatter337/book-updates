@@ -5,7 +5,7 @@ Scraping www.brandonsanderson.com for book updates.
 
 Checks for updates and adds a time stamp to show time between changes.
 
-This script  uses 4 text files make sure to create them and add the locations to
+This script uses 4 text files make sure to create them and add the locations to
 the per, per-old, new and old varibles
 """
 
@@ -28,7 +28,7 @@ def copy():
     copy2(per, per_old)
 
 
-def get_soiup():
+def get_soup():
     """Open with urlopen || runs through bs4."""
     global soup
     html = urlopen("http://brandonsanderson.com/")
@@ -36,7 +36,7 @@ def get_soiup():
     return soup
 
 
-def get_texit():
+def get_text():
     """Get text from the div tags with the class progress-titles."""
     global x
     for i in soup.body("div", {"class": "progress-titles"}):
