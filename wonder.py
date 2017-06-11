@@ -44,9 +44,11 @@ def get_text():
 def change_write_text():
     """Make text more readable || Then write to file"""
     global out
-    xx = re.sub(r'(\W*book\W\d{1})(\d{1,3}%)', r'\1 \2', x)
-    xxx = re.sub(r'(\W*Thesis\W*)(\d{1,3}%)', r'\1 \2', xx)
-    out = xxx.strip()
+    Change1 = x.replace("In Progress", " ").replace("Rewrite", "\nRewrite").replace("Rewrite1", "Rewrite 1").\
+        replace("1st", "\n\n1st").lstrip()
+    Change2 = re.sub(r'(\W*book\W\d{1})(\d{1,3}%)', r'\1 \2', Change1)
+    Change3 = re.sub(r'(\W*Thesis\W*)(\d{1,3}%)', r'\1 \2', Change2)
+    out = Change3.strip()
     log = open(per, "w")
     print(out, file=log)
 
